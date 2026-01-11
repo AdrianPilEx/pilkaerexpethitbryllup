@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adrian & Emma | 10.10.2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#4CAF50',
+                        accent: '#A7C9A0',
+                        light: '#F5F8F5',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #F5F8F5; }
+        .hero { background-image: url('https://media.istockphoto.com/id/537635142/photo/groom-and-bride-sitting-at-the-table-setted-for-two.jpg?s=612x612&w=0&k=20&c=6rn99OQNMNMQVnbEVIB8q5lgkpkQ39ByrUQoK890YCDGEpWh4IuVWyT4XR6c1o1pfx6-Q0'); background-size: cover; background-position: center; }
+        @media (max-width: 768px) { .hero { background-image: url('https://media.istockphoto.com/id/537635142/photo/groom-and-bride-sitting-at-the-table-setted-for-two.jpg?s=612x612&w=0&k=20&c=6rn99OQNMNMQVnbEVIB8q5lgkpkQ39ByrUQoK890YCDGEpWh4IuVWyT4XR6c1o1pfx6-Q0'); } }
+    </style>
+</head>
+<body class="text-gray-800 font-sans">
+
+    <!-- Language Toggle -->
+    <div class="fixed top-4 right-4 z-50">
+        <button onclick="toggleLang('da')" class="px-4 py-2 bg-primary text-white rounded-l-lg">DA</button>
+        <button onclick="toggleLang('en')" class="px-4 py-2 bg-gray-300 text-gray-800 rounded-r-lg">EN</button>
+    </div>
+
+    <!-- Hero -->
+    <section id="home" class="hero h-screen flex items-center justify-center text-center text-white relative">
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <div class="relative z-10">
+            <h1 class="text-6xl md:text-8xl font-serif mb-4">Adrian & Emma</h1>
+            <p class="text-2xl md:text-4xl mb-8 lang-da">10. oktober 2026</p>
+            <p class="text-2xl md:text-4xl mb-8 lang-en hidden">October 10, 2026</p>
+            <div id="countdown" class="text-3xl md:text-5xl font-serif"></div>
+            <p class="mt-12 text-xl lang-da">Vi gifter os!</p>
+            <p class="mt-12 text-xl lang-en hidden">We're getting married!</p>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 bg-white shadow-md z-40">
+        <ul class="flex flex-wrap justify-center py-4 gap-8 text-lg">
+            <li><a href="#home" class="hover:text-primary">Forside</a></li>
+            <li><a href="#program" class="hover:text-primary">Program</a></li>
+            <li><a href="#info" class="hover:text-primary">Praktisk info</a></li>
+            <li><a href="#rsvp" class="hover:text-primary">Tilmelding</a></li>
+            <li><a href="#gaver" class="hover:text-primary">Gaveønsker</a></li>
+            <li><a href="#galleri" class="hover:text-primary">Galleri</a></li>
+            <li><a href="#kontakt" class="hover:text-primary">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <!-- Velkommen (kan udvides) -->
+    <section class="py-20 text-center bg-light">
+        <h2 class="text-5xl font-serif mb-8 text-primary lang-da">Velkommen</h2>
+        <h2 class="text-5xl font-serif mb-8 text-primary lang-en hidden">Welcome</h2>
+        <p class="max-w-2xl mx-auto text-lg lang-da">Vi glæder os enormt til at fejre vores dag med jer!</p>
+        <p class="max-w-2xl mx-auto text-lg lang-en hidden">We can't wait to celebrate our special day with you!</p>
+    </section>
+
+    <!-- Program -->
+    <section id="program" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-5xl font-serif mb-12 text-primary lang-da">Program</h2>
+            <h2 class="text-5xl font-serif mb-12 text-primary lang-en hidden">Schedule</h2>
+            <div class="space-y-8 text-lg">
+                <div>
+                    <p class="font-semibold lang-da">Kl. 13:00 – Vielse</p>
+                    <p class="lang-da">Katolsk Vor Frue Kirke, Ryesgade 26, 8000 Aarhus C</p>
+                    <p class="font-semibold lang-en hidden">1:00 PM – Ceremony</p>
+                    <p class="lang-en hidden">Catholic Vor Frue Church, Ryesgade 26, 8000 Aarhus C</p>
+                </div>
+                <div>
+                    <p class="font-semibold lang-da">Herefter – Reception (indtil kl. 17:00)</p>
+                    <p class="lang-da">Studie Köter, Risskov (nær Aarhus)</p>
+                    <p class="font-semibold lang-en hidden">Afterwards – Reception (until 5:00 PM)</p>
+                    <p class="lang-en hidden">Studie Köter, Risskov (near Aarhus)</p>
+                </div>
+                <div>
+                    <p class="font-semibold lang-da">Kl. 17:00 – Fest & middag</p>
+                    <p class="lang-da">Samme sted</p>
+                    <p class="font-semibold lang-en hidden">5:00 PM – Party & dinner</p>
+                    <p class="lang-en hidden">Same venue</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Praktisk info -->
+    <section id="info" class="py-20 bg-light">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-5xl font-serif mb-12 text-center text-primary lang-da">Praktisk information</h2>
+            <h2 class="text-5xl font-serif mb-12 text-center text-primary lang-en hidden">Practical information</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-serif mb-4 lang-da">Vielse</h3>
+                    <h3 class="text-2xl font-serif mb-4 lang-en hidden">Ceremony</h3>
+                    <p class="lang-da">Katolsk Vor Frue Kirke<br>Ryesgade 26, 8000 Aarhus C</p>
+                    <p class="lang-en hidden">Catholic Vor Frue Church<br>Ryesgade 26, 8000 Aarhus C</p>
+                    <iframe class="w-full h-64 mt-4 rounded" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2223.566!2d10.2105!3d56.1602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464c3f8f8e8b8e8b%3A0x8e8b8e8f8e8b8e8b!2sVor%20Frue%20Kirke!5e0!3m2!1sda!2sdk!4v1700000000000" loading="lazy"></iframe>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-serif mb-4 lang-da">Reception & fest</h3>
+                    <h3 class="text-2xl font-serif mb-4 lang-en hidden">Reception & party</h3>
+                    <p class="lang-da">Studie Köter<br>Risskov (nær Aarhus)<br>Telefon: +45 4076 6477<br><a href="https://www.studie-koeter.dk/" class="text-primary">studie-koeter.dk</a></p>
+                    <p class="lang-en hidden">Studie Köter<br>Risskov (near Aarhus)<br>Phone: +45 4076 6477<br><a href="https://www.studie-koeter.dk/" class="text-primary">studie-koeter.dk</a></p>
+                    <p class="mt-4 lang-da"><a href="https://www.google.com/maps/dir/Ryesgade+26,+Aarhus/Studie+K%C3%B6ter,+Risskov" target="_blank" class="text-primary underline">Rute fra kirke til venue (Google Maps)</a></p>
+                    <p class="mt-4 lang-en hidden"><a href="https://www.google.com/maps/dir/Ryesgade+26,+Aarhus/Studie+K%C3%B6ter,+Risskov" target="_blank" class="text-primary underline">Directions from church to venue (Google Maps)</a></p>
+                </div>
+            </div>
+            <p class="text-center mt-12 lang-da">Transport: Vi anbefaler taxi eller samkørsel fra kirken til Risskov (ca. 10-15 min). Ingen dresscode.</p>
+            <p class="text-center mt-12 lang-en hidden">Transport: We recommend taxi or carpool from the church to Risskov (about 10-15 min). No dress code.</p>
+        </div>
+    </section>
+
+    <!-- RSVP (password-beskyttet) -->
+    <section id="rsvp" class="py-20 bg-white">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="text-5xl font-serif mb-12 text-primary lang-da">Tilmelding / RSVP</h2>
+            <h2 class="text-5xl font-serif mb-12 text-primary lang-en hidden">RSVP</h2>
+            <div id="rsvp-form" class="hidden">
+                <form action="https://formspree.io/f/DIN_ENDPOINT_HER" method="POST" class="space-y-6">
+                    <input type="text" name="name" placeholder="Navn / Name" required class="w-full p-4 border rounded">
+                    <input type="email" name="email" placeholder="Email" required class="w-full p-4 border rounded">
+                    <select name="attending" required class="w-full p-4 border rounded">
+                        <option value="">Kommer jeg? / Attending?</option>
+                        <option value="ja">Ja, glæder mig! / Yes</option>
+                        <option value="nej">Nej, desværre / No</option>
+                    </select>
+                    <textarea name="message" placeholder="Besked (allergier, indslag mv.) / Message (allergies, toasts etc.)" rows="5" class="w-full p-4 border rounded"></textarea>
+                    <button type="submit" class="bg-primary text-white px-8 py-4 rounded text-lg">Send</button>
+                </form>
+                <p class="mt-8 text-sm lang-da">Frist: 1. august 2026</p>
+                <p class="mt-8 text-sm lang-en hidden">Deadline: August 1, 2026</p>
+            </div>
+            <button onclick="checkPassword()" class="bg-primary text-white px-8 py-4 rounded text-lg lang-da">Åbn tilmelding (kræver kode)</button>
+            <button onclick="checkPassword()" class="bg-primary text-white px-8 py-4 rounded text-lg lang-en hidden">Open RSVP (requires code)</button>
+        </div>
+    </section>
+
+    <!-- Gaveønsker -->
+    <section id="gaver" class="py-20 bg-light text-center">
+        <h2 class="text-5xl font-serif mb-12 text-primary lang-da">Gaveønsker</h2>
+        <h2 class="text-5xl font-serif mb-12 text-primary lang-en hidden">Gift registry</h2>
+        <p class="max-w-2xl mx-auto text-lg lang-da">Den største gave er jeres tilstedeværelse, men hvis I vil bidrage: <a href="https://www.oenskskyen.dk/" class="text-primary underline">Vores ønskesky</a> (link kommer senere).</p>
+        <p class="max-w-2xl mx-auto text-lg lang-en hidden">Your presence is the greatest gift, but if you'd like to contribute: <a href="https://www.oenskskyen.dk/" class="text-primary underline">Our gift registry</a> (link coming soon).</p>
+    </section>
+
+    <!-- Galleri -->
+    <section id="galleri" class="py-20 bg-white">
+        <h2 class="text-5xl font-serif mb-12 text-center text-primary lang-da">Galleri</h2>
+        <h2 class="text-5xl font-serif mb-12 text-center text-primary lang-en hidden">Gallery</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-8">
+            <img src="https://media.istockphoto.com/id/537635142/photo/groom-and-bride-sitting-at-the-table-setted-for-two.jpg?s=612x612&w=0&k=20&c=6rn99OQNMNMQVnbEVIB8q5lgkpkQ39ByrUQoK890YCDGEpWh4IuVWyT4XR6c1o1pfx6-Q0" alt="Placeholder" class="rounded shadow-lg">
+            <img src="https://www.shutterstock.com/image-photo/newlyweds-share-heartfelt-moment-against-600nw-2664505513.jpg" alt="Placeholder" class="rounded shadow-lg">
+            <img src="https://www.shutterstock.com/image-photo/this-image-portrays-couple-celebrating-260nw-2665332743.jpg" alt="Placeholder" class="rounded shadow-lg">
+            <img src="https://thumbs.dreamstime.com/b/young-couple-love-man-woman-hugging-huge-tree-themed-creative-wedding-bright-fantasy-photography-young-couple-195192877.jpg" alt="Placeholder" class="rounded shadow-lg">
+            <img src="https://marrymetampabay.com/wp-content/uploads/2021/03/14-2.jpg" alt="Placeholder" class="rounded shadow-lg">
+            <img src="https://marrymetampabay.com/wp-content/uploads/2024/01/11Romantic-Green-and-White-Garden-Wedding-Inspiration-1800x1202.webp" alt="Placeholder" class="rounded shadow-lg">
+        </div>
+    </section>
+
+    <!-- Kontakt (toastmaster) -->
+    <section id="kontakt" class="py-20 bg-light text-center">
+        <h2 class="text-5xl font-serif mb-12 text-primary lang-da">Kontakt</h2>
+        <h2 class="text-5xl font-serif mb-12 text-primary lang-en hidden">Contact</h2>
+        <p class="max-w-2xl mx-auto text-lg lang-da">Har I indslag eller spørgsmål til toastmaster?<br>Send en mail til: toastmaster@eksempel.dk (opdateres senere)</p>
+        <p class="max-w-2xl mx-auto text-lg lang-en hidden">Speeches or questions for the toastmaster?<br>Email: toastmaster@example.com (to be updated)</p>
+    </section>
+
+    <!-- Scripts -->
+    <script>
+        // Countdown
+        const weddingDate = new Date('2026-10-10T13:00:00').getTime();
+        const countdown = document.getElementById('countdown');
+        setInterval(() => {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            countdown.innerHTML = `${days} dage ${hours} timer ${minutes} minutter`;
+            if (distance < 0) countdown.innerHTML = "Vi er gift!";
+        }, 1000);
+
+        // Language toggle
+        function toggleLang(lang) {
+            document.querySelectorAll('.lang-da').forEach(el => el.classList.toggle('hidden', lang === 'en'));
+            document.querySelectorAll('.lang-en').forEach(el => el.classList.toggle('hidden', lang === 'da'));
+        }
+
+        // RSVP password (skift "bryllaup2026" til noget jer kendt!)
+        function checkPassword() {
+            const password = prompt(lang === 'en' ? 'Enter password' : 'Indtast adgangskode');
+            if (password === 'bryllaup2026') {
+                document.getElementById('rsvp-form').classList.remove('hidden');
+            } else {
+                alert('Forkert kode / Wrong code');
+            }
+        }
+    </script>
+</body>
+</html>
