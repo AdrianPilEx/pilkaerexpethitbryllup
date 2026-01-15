@@ -531,20 +531,8 @@
                     <p class="text-stone/70 text-sm lang-en hidden">We recommend taxi or carpool from the church to Risskov (approx. 10-15 min).</p>
                 </div>
                 
-                <!-- Dress code -->
-                <div class="fade-in fade-in-delay-3 bg-white rounded-xl p-6 shadow-sm">
-                    <div class="w-10 h-10 rounded-full bg-sage-100 flex items-center justify-center mb-4">
-                        <svg class="w-5 h-5 text-sage-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
-                        </svg>
-                    </div>
-                    <h4 class="font-serif text-xl text-sage-800 mb-2">Dresscode</h4>
-                    <p class="text-stone/70 text-sm lang-da">Pænt hverdagstøj / semi-formelt. Kom som I har det godt!</p>
-                    <p class="text-stone/70 text-sm lang-en hidden">Smart casual / semi-formal. Wear what makes you comfortable!</p>
-                </div>
-                
                 <!-- Accommodation -->
-                <div class="fade-in fade-in-delay-4 bg-white rounded-xl p-6 shadow-sm">
+                <div class="fade-in fade-in-delay-3 bg-white rounded-xl p-6 shadow-sm">
                     <div class="w-10 h-10 rounded-full bg-sage-100 flex items-center justify-center mb-4">
                         <svg class="w-5 h-5 text-sage-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
@@ -572,84 +560,22 @@
                 <h2 class="fade-in fade-in-delay-1 font-serif text-4xl md:text-5xl lg:text-6xl text-sage-700 font-light lang-en hidden">RSVP</h2>
             </div>
             
-            <!-- Password gate -->
-            <div id="rsvp-gate" class="fade-in fade-in-delay-2 text-center">
-                <p class="text-stone/70 mb-6 lang-da">Tilmeldingen er beskyttet med en adgangskode, som I har fået tilsendt.</p>
-                <p class="text-stone/70 mb-6 lang-en hidden">The RSVP form is protected with a code that was sent to you.</p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <input type="password" id="rsvp-password" placeholder="Indtast kode / Enter code" 
-                           class="form-input px-6 py-3 border border-sage-200 rounded-lg text-center w-full sm:w-auto"
-                           onkeypress="if(event.key === 'Enter') checkPassword()">
-                    <button onclick="checkPassword()" class="btn-primary bg-sage-600 text-white px-8 py-3 rounded-lg font-medium tracking-wide w-full sm:w-auto lang-da">
-                        Åbn tilmelding
-                    </button>
-                    <button onclick="checkPassword()" class="btn-primary bg-sage-600 text-white px-8 py-3 rounded-lg font-medium tracking-wide w-full sm:w-auto lang-en hidden">
-                        Open RSVP
-                    </button>
-                </div>
-            </div>
-            
-            <!-- RSVP Form (hidden by default) -->
-            <div id="rsvp-form" class="hidden">
-                <form action="https://formspree.io/f/DIN_ENDPOINT_HER" method="POST" class="space-y-6">
-                    <div class="grid sm:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-sm font-medium text-stone/70 mb-2 lang-da">Navn</label>
-                            <label class="block text-sm font-medium text-stone/70 mb-2 lang-en hidden">Name</label>
-                            <input type="text" name="name" required 
-                                   class="form-input w-full px-4 py-3 border border-sage-200 rounded-lg">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-stone/70 mb-2">Email</label>
-                            <input type="email" name="email" required 
-                                   class="form-input w-full px-4 py-3 border border-sage-200 rounded-lg">
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <label class="block text-sm font-medium text-stone/70 mb-2 lang-da">Kommer du?</label>
-                        <label class="block text-sm font-medium text-stone/70 mb-2 lang-en hidden">Will you attend?</label>
-                        <select name="attending" required class="form-input w-full px-4 py-3 border border-sage-200 rounded-lg bg-white">
-                            <option value="" class="lang-da">Vælg venligst...</option>
-                            <option value="ja" class="lang-da">Ja, jeg glæder mig!</option>
-                            <option value="nej" class="lang-da">Nej, desværre ikke</option>
-                        </select>
-                    </div>
-                    
-                    <div>
-                        <label class="block text-sm font-medium text-stone/70 mb-2 lang-da">Antal gæster (inkl. dig selv)</label>
-                        <label class="block text-sm font-medium text-stone/70 mb-2 lang-en hidden">Number of guests (including yourself)</label>
-                        <select name="guests" class="form-input w-full px-4 py-3 border border-sage-200 rounded-lg bg-white">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                        </select>
-                    </div>
-                    
-                    <div>
-                        <label class="block text-sm font-medium text-stone/70 mb-2 lang-da">Allergier eller kostbehov</label>
-                        <label class="block text-sm font-medium text-stone/70 mb-2 lang-en hidden">Allergies or dietary requirements</label>
-                        <input type="text" name="dietary" 
-                               class="form-input w-full px-4 py-3 border border-sage-200 rounded-lg"
-                               placeholder="F.eks. vegetar, glutenfri...">
-                    </div>
-                    
-                    <div>
-                        <label class="block text-sm font-medium text-stone/70 mb-2 lang-da">Besked til brudeparret</label>
-                        <label class="block text-sm font-medium text-stone/70 mb-2 lang-en hidden">Message to the couple</label>
-                        <textarea name="message" rows="4" 
-                                  class="form-input w-full px-4 py-3 border border-sage-200 rounded-lg resize-none"
-                                  placeholder=""></textarea>
-                    </div>
-                    
-                    <div class="text-center pt-4">
-                        <button type="submit" class="btn-primary bg-sage-600 text-white px-12 py-4 rounded-lg font-medium tracking-wide text-lg">
-                            <span class="lang-da">Send tilmelding</span>
-                            <span class="lang-en hidden">Submit RSVP</span>
-                        </button>
-                    </div>
-                </form>
+            <div class="fade-in fade-in-delay-2 bg-sage-50 rounded-2xl p-8 md:p-12">
+                <p class="text-lg md:text-xl text-stone/80 leading-relaxed mb-8 lang-da">
+                    Meld jer til ved at sende en mail til os med jeres navne, antal gæster og eventuelle allergier.
+                </p>
+                <p class="text-lg md:text-xl text-stone/80 leading-relaxed mb-8 lang-en hidden">
+                    Please RSVP by sending us an email with your names, number of guests and any allergies.
+                </p>
+                
+                <a href="mailto:emmapilkaer@gmail.dk?subject=Tilmelding%20til%20bryllup" 
+                   class="btn-primary inline-flex items-center gap-2 bg-sage-600 text-white px-8 py-4 rounded-lg font-medium tracking-wide">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                    <span class="lang-da">Send tilmelding</span>
+                    <span class="lang-en hidden">Send RSVP</span>
+                </a>
                 
                 <p class="text-center mt-8 text-stone/60 text-sm">
                     <span class="lang-da">Svarfrist: <strong>1. august 2026</strong></span>
@@ -662,35 +588,23 @@
     <!-- Gift Registry -->
     <section id="gaver" class="py-24 md:py-32 bg-sage-50">
         <div class="max-w-3xl mx-auto px-6 text-center">
-            <p class="fade-in text-sage-600 text-sm tracking-[0.3em] uppercase mb-4 lang-da">Hvis I ønsker at give</p>
-            <p class="fade-in text-sage-600 text-sm tracking-[0.3em] uppercase mb-4 lang-en hidden">If you wish to give</p>
-            <h2 class="fade-in fade-in-delay-1 font-serif text-4xl md:text-5xl lg:text-6xl text-sage-700 font-light mb-8 lang-da">Gaveønsker</h2>
-            <h2 class="fade-in fade-in-delay-1 font-serif text-4xl md:text-5xl lg:text-6xl text-sage-700 font-light mb-8 lang-en hidden">Gift registry</h2>
+            <p class="fade-in text-sage-600 text-sm tracking-[0.3em] uppercase mb-4 lang-da">Gaveønsker</p>
+            <p class="fade-in text-sage-600 text-sm tracking-[0.3em] uppercase mb-4 lang-en hidden">Gift registry</p>
+            <h2 class="fade-in fade-in-delay-1 font-serif text-4xl md:text-5xl lg:text-6xl text-sage-700 font-light mb-12 lang-da">Ønskeskyen</h2>
+            <h2 class="fade-in fade-in-delay-1 font-serif text-4xl md:text-5xl lg:text-6xl text-sage-700 font-light mb-12 lang-en hidden">Wishlist</h2>
             
-            <div class="fade-in fade-in-delay-2 bg-white rounded-2xl p-8 md:p-12 shadow-sm">
-                <svg class="w-16 h-16 mx-auto text-sage-300 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/>
-                </svg>
-                
-                <p class="text-lg md:text-xl text-stone/80 leading-relaxed mb-8 lang-da">
-                    Den største gave er jeres tilstedeværelse på vores store dag.<br>
-                    Men ønsker I at give en gave, vil vi sætte stor pris på et bidrag til vores bryllupsrejse.
-                </p>
-                <p class="text-lg md:text-xl text-stone/80 leading-relaxed mb-8 lang-en hidden">
-                    Your presence at our wedding is the greatest gift.<br>
-                    But if you wish to give, we would appreciate a contribution to our honeymoon.
-                </p>
-                
+            <div class="fade-in fade-in-delay-2">
                 <a href="https://www.oenskskyen.dk/" target="_blank" 
-                   class="btn-primary inline-flex items-center gap-2 bg-sage-600 text-white px-8 py-4 rounded-lg font-medium tracking-wide">
+                   class="btn-primary inline-flex items-center gap-3 bg-sage-600 text-white px-10 py-5 rounded-lg font-medium tracking-wide text-lg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/>
+                    </svg>
                     <span class="lang-da">Se vores ønskeliste</span>
                     <span class="lang-en hidden">View our wishlist</span>
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                     </svg>
                 </a>
-                <p class="text-sm text-stone/50 mt-4 lang-da">(Link kommer snart)</p>
-                <p class="text-sm text-stone/50 mt-4 lang-en hidden">(Link coming soon)</p>
             </div>
         </div>
     </section>
@@ -767,8 +681,8 @@
                     <h3 class="font-serif text-xl text-sage-800 mb-2">Toastmaster</h3>
                     <p class="text-stone/70 text-sm mb-4 lang-da">Har du taler, sange eller indslag til festen?</p>
                     <p class="text-stone/70 text-sm mb-4 lang-en hidden">Do you have speeches, songs or entertainment for the party?</p>
-                    <a href="mailto:toastmaster@eksempel.dk" class="text-sage-600 hover:text-sage-700 font-medium">
-                        toastmaster@eksempel.dk
+                    <a href="/cdn-cgi/l/email-protection#fd89929c8e89909c8e89988fbd98968e98908d9891d39996" class="text-sage-600 hover:text-sage-700 font-medium">
+                        <span class="__cf_email__" data-cfemail="0a7e656b797e676b797e6f784a6f61796f677a6f66246e61">[email&#160;protected]</span>
                     </a>
                     <p class="text-xs text-stone/40 mt-2 lang-da">(opdateres med korrekt mail)</p>
                     <p class="text-xs text-stone/40 mt-2 lang-en hidden">(to be updated)</p>
@@ -785,8 +699,8 @@
                     <h3 class="font-serif text-xl text-sage-800 mb-2 lang-en hidden">The couple</h3>
                     <p class="text-stone/70 text-sm mb-4 lang-da">Andre spørgsmål? Skriv til os!</p>
                     <p class="text-stone/70 text-sm mb-4 lang-en hidden">Other questions? Write to us!</p>
-                    <a href="mailto:adrian.emma@eksempel.dk" class="text-sage-600 hover:text-sage-700 font-medium">
-                        adrian.emma@eksempel.dk
+                    <a href="/cdn-cgi/l/email-protection#d7b6b3a5beb6b9f9b2babab697b2bca4b2baa7b2bbf9b3bc" class="text-sage-600 hover:text-sage-700 font-medium">
+                        <span class="__cf_email__" data-cfemail="82e3e6f0ebe3ecace7efefe3c2e7e9f1e7eff2e7eeace6e9">[email&#160;protected]</span>
                     </a>
                     <p class="text-xs text-stone/40 mt-2 lang-da">(opdateres med korrekt mail)</p>
                     <p class="text-xs text-stone/40 mt-2 lang-en hidden">(to be updated)</p>
@@ -811,7 +725,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Language state
         let currentLang = 'da';
         
@@ -832,12 +746,10 @@
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
             
             const dayLabel = currentLang === 'da' ? 'dage' : 'days';
             const hourLabel = currentLang === 'da' ? 'timer' : 'hours';
-            const minLabel = currentLang === 'da' ? 'min' : 'min';
-            const secLabel = currentLang === 'da' ? 'sek' : 'sec';
+            const minLabel = currentLang === 'da' ? 'minutter' : 'minutes';
             
             document.getElementById('countdown').innerHTML = `
                 <div class="countdown-item text-center px-3 sm:px-6">
@@ -848,13 +760,9 @@
                     <span class="block font-serif text-3xl sm:text-4xl md:text-5xl">${hours}</span>
                     <span class="text-xs uppercase tracking-widest opacity-70">${hourLabel}</span>
                 </div>
-                <div class="countdown-item text-center px-3 sm:px-6">
+                <div class="text-center px-3 sm:px-6">
                     <span class="block font-serif text-3xl sm:text-4xl md:text-5xl">${minutes}</span>
                     <span class="text-xs uppercase tracking-widest opacity-70">${minLabel}</span>
-                </div>
-                <div class="text-center px-3 sm:px-6">
-                    <span class="block font-serif text-3xl sm:text-4xl md:text-5xl">${seconds}</span>
-                    <span class="text-xs uppercase tracking-widest opacity-70">${secLabel}</span>
                 </div>
             `;
         }
@@ -882,20 +790,6 @@
             updateCountdown();
         }
         
-        // RSVP password check
-        function checkPassword() {
-            const input = document.getElementById('rsvp-password').value;
-            const correctPassword = 'bryllaup2026'; // Change this to your actual password
-            
-            if (input.toLowerCase() === correctPassword.toLowerCase()) {
-                document.getElementById('rsvp-gate').classList.add('hidden');
-                document.getElementById('rsvp-form').classList.remove('hidden');
-            } else {
-                const message = currentLang === 'da' ? 'Forkert kode. Prøv igen.' : 'Wrong code. Try again.';
-                alert(message);
-            }
-        }
-        
         // Scroll animations (Intersection Observer)
         const observerOptions = {
             threshold: 0.1,
@@ -916,17 +810,4 @@
         
         // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+            anchor.addEventListener('cli
