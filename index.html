@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adrian & Emma | 10.10.2026</title>
+    <title>Emma & Adrian | 10.10.2026</title>
     <meta name="description" content="Vi skal giftes den 10. oktober 2026 i Aarhus.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,7 +31,11 @@
         body { background-color: #faf9f6; overflow-x: hidden; }
         ::selection { background-color: #b5c0a4; color: #3d3d3d; }
         .script-accent { font-style: italic; font-weight: 300; letter-spacing: 0.02em; }
-        .hero { background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.4) 100%), url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=80') center/cover no-repeat; min-height: 100vh; }
+        .hero { 
+            background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.4) 100%), 
+                        url('/84dab2b7-ebdd-4410-a136-6f0cc90db867.jpg') center/cover no-repeat; 
+            min-height: 100vh; 
+        }
         .ornament { width: 120px; height: 1px; background: linear-gradient(90deg, transparent, currentColor 20%, currentColor 80%, transparent); }
         @keyframes heroFadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         .hero-animate { animation: heroFadeIn 1.2s ease-out forwards; opacity: 0; }
@@ -61,7 +65,13 @@
         .gallery-item img { transition: transform 0.6s ease; }
         .gallery-item:hover img { transform: scale(1.05); }
         .leaf-decoration { opacity: 0.08; pointer-events: none; }
-        @media (max-width: 768px) { .hero { background-image: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 100%), url('https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80'); } .timeline-item { padding-left: 2rem; } }
+        @media (max-width: 768px) { 
+            .hero { 
+                background-image: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 100%), 
+                                  url('/84dab2b7-ebdd-4410-a136-6f0cc90db867.jpg'); 
+            } 
+            .timeline-item { padding-left: 2rem; } 
+        }
     </style>
 </head>
 <body class="text-stone font-sans antialiased">
@@ -71,7 +81,6 @@
             <button onclick="toggleLang('en')" id="btn-en" class="lang-btn px-4 py-2 rounded-full text-sm font-medium tracking-wide">EN</button>
         </div>
     </div>
-
     <section id="home" class="hero relative flex items-center justify-center text-center text-white">
         <div class="relative z-10 px-6">
             <p class="hero-animate hero-delay-1 text-sm tracking-[0.4em] uppercase mb-6 opacity-80 lang-da">Vi skal giftes</p>
@@ -97,21 +106,19 @@
             </div>
         </div>
     </section>
-
     <nav class="sticky top-0 bg-cream/95 backdrop-blur-md shadow-sm z-40">
         <div class="max-w-6xl mx-auto px-6">
             <ul class="flex flex-wrap justify-center py-5 gap-x-8 gap-y-2 text-sm tracking-widest uppercase">
                 <li><a href="#home" class="nav-link lang-da">Forside</a><a href="#home" class="nav-link lang-en hidden">Home</a></li>
                 <li><a href="#program" class="nav-link">Program</a></li>
                 <li><a href="#info" class="nav-link lang-da">Praktisk</a><a href="#info" class="nav-link lang-en hidden">Info</a></li>
-                <li><a href="#rsvp" class="nav-link lang-da">Tilmelding</a><a href="#rsvp" class="nav-link lang-en hidden">RSVP</a></li>
+                <li><a href="#rsvp" class="nav-link lang-da">Svar på begivenheden</a><a href="#rsvp" class="nav-link lang-en hidden">RSVP</a></li>
                 <li><a href="#gaver" class="nav-link lang-da">Gaver</a><a href="#gaver" class="nav-link lang-en hidden">Gifts</a></li>
                 <li><a href="#galleri" class="nav-link lang-da">Galleri</a><a href="#galleri" class="nav-link lang-en hidden">Gallery</a></li>
                 <li><a href="#kontakt" class="nav-link lang-da">Kontakt</a><a href="#kontakt" class="nav-link lang-en hidden">Contact</a></li>
             </ul>
         </div>
     </nav>
-
     <section class="py-24 md:py-32 text-center bg-cream relative overflow-hidden">
         <svg class="leaf-decoration absolute -left-20 top-10 w-64 h-64 text-sage-400 transform rotate-12" viewBox="0 0 100 100" fill="currentColor"><path d="M50 0 C60 30, 90 40, 100 50 C90 60, 60 70, 50 100 C40 70, 10 60, 0 50 C10 40, 40 30, 50 0Z"/></svg>
         <svg class="leaf-decoration absolute -right-20 bottom-10 w-64 h-64 text-sage-400 transform -rotate-12" viewBox="0 0 100 100" fill="currentColor"><path d="M50 0 C60 30, 90 40, 100 50 C90 60, 60 70, 50 100 C40 70, 10 60, 0 50 C10 40, 40 30, 50 0Z"/></svg>
@@ -125,7 +132,6 @@
             <p class="max-w-2xl mx-auto text-lg md:text-xl leading-relaxed text-stone/80 lang-en hidden">We can't wait to celebrate our special day with you.<br>Here you'll find all the practical information you need.</p>
         </div>
     </section>
-
     <section id="program" class="py-24 md:py-32 bg-white">
         <div class="max-w-3xl mx-auto px-6">
             <div class="text-center mb-16">
@@ -168,7 +174,6 @@
             </div>
         </div>
     </section>
-
     <section id="info" class="py-24 md:py-32 bg-sage-50">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-16">
@@ -229,28 +234,33 @@
             </div>
         </div>
     </section>
-
-    <section id="rsvp" class="py-24 md:py-32 bg-white">
-        <div class="max-w-2xl mx-auto px-6">
+    <section id="rsvp" class="py-24 md:py-32 bg-white relative overflow-hidden">
+        <div class="max-w-3xl mx-auto px-6 relative z-10">
             <div class="text-center mb-12">
-                <p class="text-sage-600 text-sm tracking-[0.3em] uppercase mb-4 lang-da">Meld jer til</p>
-                <p class="text-sage-600 text-sm tracking-[0.3em] uppercase mb-4 lang-en hidden">Let us know</p>
-                <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl text-sage-700 font-light lang-da">Tilmelding</h2>
-                <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl text-sage-700 font-light lang-en hidden">RSVP</h2>
+                <p class="fade-in text-sage-600 text-sm tracking-[0.3em] uppercase mb-4 lang-da">Meld jer til</p>
+                <p class="fade-in text-sage-600 text-sm tracking-[0.3em] uppercase mb-4 lang-en hidden">Let us know</p>
+                <h2 class="fade-in fade-in-delay-1 font-serif text-4xl md:text-5xl lg:text-6xl text-sage-700 font-light lang-da">Svar på begivenheden</h2>
+                <h2 class="fade-in fade-in-delay-1 font-serif text-4xl md:text-5xl lg:text-6xl text-sage-700 font-light lang-en hidden">RSVP</h2>
             </div>
-            <div class="bg-sage-50 rounded-2xl p-8 md:p-12 text-center">
-                <p class="text-lg md:text-xl text-stone/80 leading-relaxed mb-8 lang-da">Meld jer til ved at sende en mail til os med jeres navne, antal gæster og eventuelle allergier.</p>
-                <p class="text-lg md:text-xl text-stone/80 leading-relaxed mb-8 lang-en hidden">Please RSVP by sending us an email with your names, number of guests and any allergies.</p>
-                <a href="mailto:https://docs.google.com/forms/d/e/1FAIpQLSdQ31BRMqwDm1l7hJZB4HzY54tgOQmQQ0DKhprb6GMkq2EJxw/viewform?usp=header?subject=Tilmelding%20til%20bryllup" class="btn-primary inline-flex items-center gap-2 bg-sage-600 text-white px-8 py-4 rounded-lg font-medium tracking-wide">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                    <span class="lang-da">Send tilmelding</span>
-                    <span class="lang-en hidden">Send RSVP</span>
-                </a>
-                <p class="mt-8 text-stone/60 text-sm"><span class="lang-da">Svarfrist: <strong>1. august 2026</strong></span><span class="lang-en hidden">Deadline: <strong>August 1, 2026</strong></span></p>
+
+            <!-- Google Forms embed (vises direkte – ingen password) -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdQ31BRMqwDm1l7hJZB4HzY54tgOQmQQ0DKhprb6GMkq2EJxw/viewform?embedded=true"
+                        width="100%"
+                        height="1200"
+                        frameborder="0"
+                        marginheight="0"
+                        marginwidth="0"
+                        class="w-full">
+                    Loading…
+                </iframe>
             </div>
+            <p class="text-center mt-8 text-stone/60 text-sm">
+                <span class="lang-da">Svarfrist: <strong>1. august 2026</strong></span>
+                <span class="lang-en hidden">Deadline: <strong>August 1, 2026</strong></span>
+            </p>
         </div>
     </section>
-
     <section id="gaver" class="py-24 md:py-32 bg-sage-50">
         <div class="max-w-3xl mx-auto px-6 text-center">
             <p class="text-sage-600 text-sm tracking-[0.3em] uppercase mb-4 lang-da">Gaveønsker</p>
@@ -265,7 +275,6 @@
             </a>
         </div>
     </section>
-
     <section id="galleri" class="py-24 md:py-32 bg-white">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-16">
@@ -286,7 +295,6 @@
             <p class="text-center mt-12 text-stone/50 text-sm lang-en hidden">These are placeholder images – we'll update with our own photos soon!</p>
         </div>
     </section>
-
     <section id="kontakt" class="py-24 md:py-32 bg-sage-50">
         <div class="max-w-3xl mx-auto px-6 text-center">
             <p class="text-sage-600 text-sm tracking-[0.3em] uppercase mb-4 lang-da">Har du spørgsmål?</p>
@@ -320,7 +328,6 @@
             </div>
         </div>
     </section>
-
     <footer class="py-16 bg-sage-800 text-white/80">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <p class="font-serif text-3xl md:text-4xl text-white mb-4">Adrian & Emma</p>
@@ -330,7 +337,6 @@
             <p class="text-sm text-white/50 lang-en hidden">We can't wait to see you!</p>
         </div>
     </footer>
-
     <script>
         var currentLang = 'da';
         function updateCountdown() {
